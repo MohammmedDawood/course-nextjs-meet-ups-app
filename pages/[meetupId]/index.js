@@ -33,7 +33,7 @@ export async function getStaticPaths() {
   client.close();
 
   return {
-    fallback: false,
+    fallback: "blocking", // or true to regenrate pages on the fly but blocking will wait for the page to be generated after data fetched
     paths: meetups.map((meetup) => ({
       params: { meetupId: meetup._id.toString() },
     })),
