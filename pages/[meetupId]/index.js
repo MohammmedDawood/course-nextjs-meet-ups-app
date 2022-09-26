@@ -12,6 +12,24 @@ function MeetupDetails(props) {
   );
 }
 
+export async function getStaticPaths() {
+  return {
+    fallback: false,
+    paths: [
+      {
+        params: {
+          meetupId: "m1",
+        },
+      },
+      {
+        params: {
+          meetupId: "m2",
+        },
+      },
+    ],
+  };
+}
+
 //static generation - pre-rendering SSG
 export async function getStaticProps(context) {
   console.log(context);
