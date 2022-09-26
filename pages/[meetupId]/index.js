@@ -32,10 +32,10 @@ export async function getStaticPaths() {
 
 //static generation - pre-rendering SSG
 export async function getStaticProps(context) {
-  console.log(context);
+  // console.log(context);
   // fetch data from an API
   const meetupId = context.params.meetupId;
-  console.log(meetupId);
+  // console.log(meetupId);
   return {
     props: {
       meetupData: {
