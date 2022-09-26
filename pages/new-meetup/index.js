@@ -6,7 +6,7 @@ import NewMeetupForm from "../../components/meetups/NewMeetupForm";
 function NewMeetupPage() {
   const router = useRouter();
   async function addMeetupHandler(enteredMeetupData) {
-    console.log(enteredMeetupData);
+    // console.log(enteredMeetupData);
     // send this to the backend
     const response = await fetch("/api/new-meetup", {
       method: "POST",
@@ -17,7 +17,7 @@ function NewMeetupPage() {
     });
 
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
 
     // redirect to the home page
     router.push("/");
